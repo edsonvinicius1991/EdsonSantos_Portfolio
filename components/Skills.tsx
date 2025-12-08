@@ -9,6 +9,7 @@ import {
 } from 'lucide-react';
 import { Translation, SkillMetric } from '../types';
 import { ScrollReveal } from './ScrollReveal';
+import { PowerAppsIcon, PowerAutomateIcon, PowerPlatformIcon, OutSystemsIcon } from './TechIcons';
 
 interface SkillsProps {
   t: Translation['skills'];
@@ -33,6 +34,11 @@ const getTechIcon = (tech: string) => {
   if (normalized.includes('spring')) return <Layers size={size} className="text-green-500" />;
   if (normalized.includes('tailwind')) return <Code2 size={size} className="text-cyan-500" />;
   
+  if (normalized.includes('power apps')) return <PowerAppsIcon className="w-4 h-4" />;
+  if (normalized.includes('power automate')) return <PowerAutomateIcon className="w-4 h-4" />;
+  if (normalized.includes('power platform')) return <PowerPlatformIcon className="w-4 h-4" />;
+  if (normalized.includes('outsystems')) return <OutSystemsIcon className="w-4 h-4" />;
+  
   if (normalized.includes('automate') || normalized.includes('apps')) return <Workflow size={size} className="text-blue-600" />;
   if (normalized.includes('excel') || normalized.includes('vba')) return <Table2 size={size} className="text-green-600" />;
   if (normalized.includes('sap')) return <Box size={size} className="text-blue-800" />;
@@ -42,6 +48,83 @@ const getTechIcon = (tech: string) => {
   
   return <Terminal size={size} className="text-slate-400" />;
 };
+
+const TechLogo: React.FC<{
+  name: string;
+  urls?: string[];
+  component?: React.ComponentType<{ className?: string }>;
+  className?: string;
+  forceColor?: boolean;
+}> = ({ name, urls, component: Component, className = "", forceColor = false }) => {
+  const [index, setIndex] = React.useState(0);
+  
+  const baseClasses = forceColor
+    ? "opacity-100 filter-none"
+    : "filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100";
+    
+  if (Component) {
+    return (
+      <div className={`h-10 w-10 md:h-12 md:w-12 transition-all duration-300 transform group-hover:scale-110 ${baseClasses} ${className}`}>
+        <Component className={`w-full h-full object-contain ${className || ''}`} />
+      </div>
+    );
+  }
+
+  const src = urls ? urls[index] : '';
+
+  return (
+    <img
+      src={src}
+      alt={name}
+      title={name}
+      onError={() => {
+        if (urls && index < urls.length - 1) setIndex(index + 1);
+      }}
+      className={`h-10 w-10 md:h-12 md:w-12 object-contain transition-all duration-300 transform group-hover:scale-110 ${baseClasses} ${className}`}
+    />
+  );
+};
+
+const TECH_GROUPS = [
+  {
+    title: 'Dados & Analytics',
+    key: 'data',
+    items: [
+      { name: 'Power BI', urls: ['https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg'] },
+      { name: 'Tableau', urls: ['https://cdn.worldvectorlogo.com/logos/tableau-software.svg'] },
+      { name: 'Python', urls: ['https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg'] },
+      { name: 'SQL Server', urls: ['https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg'], className: 'invert' },
+      { name: 'PostgreSQL', urls: ['https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg'] },
+      { name: 'Azure', urls: ['https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg'] },
+    ],
+  },
+  {
+    title: 'Desenvolvimento',
+    key: 'dev',
+    items: [
+      { name: 'HTML5', urls: ['https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg'] },
+      { name: 'CSS3', urls: ['https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg'] },
+      { name: 'React', urls: ['https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg'] },
+      { name: 'Next.js', urls: ['https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg'], className: 'invert' },
+      { name: 'TypeScript', urls: ['https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg'] },
+      { name: 'Node.js', urls: ['https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg'] },
+      { name: 'Java', urls: ['https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg'] },
+      { name: 'Spring', urls: ['https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg'] },
+      { name: 'Tailwind', urls: ['https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg'] },
+    ],
+  },
+  {
+    title: 'Automação & Low-Code',
+    key: 'automation',
+    items: [
+      { name: 'Power Apps', component: PowerAppsIcon },
+      { name: 'Power Automate', component: PowerAutomateIcon },
+      { name: 'Microsoft Power Platform', component: PowerPlatformIcon },
+      { name: 'OutSystems', component: OutSystemsIcon },
+      { name: 'SAP', urls: ['https://cdn.simpleicons.org/sap'], className: 'invert' },
+    ],
+  },
+];
 
 export const Skills: React.FC<SkillsProps> = ({ t, metrics }) => {
   return (
@@ -54,7 +137,7 @@ export const Skills: React.FC<SkillsProps> = ({ t, metrics }) => {
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-16">
           {/* Chart Section */}
           <ScrollReveal delay={0.2} className="lg:col-span-1 h-full">
             <div className="h-[300px] lg:h-full bg-slate-900/50 rounded-xl border border-slate-800 p-4 flex flex-col justify-center items-center backdrop-blur-sm relative overflow-hidden">
@@ -165,6 +248,36 @@ export const Skills: React.FC<SkillsProps> = ({ t, metrics }) => {
 
           </div>
         </div>
+        
+        {/* Tech Logos Grouped */}
+        <ScrollReveal delay={0.8}>
+          <div className="border-t border-slate-800 pt-12 space-y-10">
+            {TECH_GROUPS.map(group => (
+              <div key={group.key}>
+                <p className="text-center text-slate-400 mb-6 text-xs uppercase tracking-wider font-semibold">
+                  {group.title}
+                </p>
+                <div className="flex flex-wrap justify-center gap-8 md:gap-12 items-center opacity-80 hover:opacity-100 transition-opacity duration-300">
+                  {group.items.map((logo: any) => (
+                    <div key={`${group.key}-${logo.name}`} className="group relative flex flex-col items-center justify-center p-2">
+                      <TechLogo 
+                        name={logo.name} 
+                        urls={logo.urls} 
+                        component={logo.component}
+                        className={logo.className}
+                        forceColor={logo.forceColor}
+                      />
+                      <span className="absolute -bottom-8 text-xs text-primary-400 opacity-0 transform translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 whitespace-nowrap bg-slate-900 px-2 py-1 rounded border border-slate-800">
+                        {logo.name}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </ScrollReveal>
+
       </div>
     </section>
   );

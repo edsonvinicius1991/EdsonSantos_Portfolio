@@ -86,7 +86,7 @@ export const CONTENT: Record<'pt' | 'en', Translation> = {
           impact: 'Facilitou a gestão de planos alimentares com interface responsiva e dados centralizados.',
           tech: ['TypeScript', 'React', 'Supabase', 'Tailwind'],
           repoUrl: 'https://github.com/edsonvinicius1991/nutri-plan-meals',
-          image: 'https://picsum.photos/600/400?random=1'
+          image: 'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1760623631/NutriPlan_-_index_dmn7ju.png'
         },
         {
           title: 'Saúde Conecta',
@@ -97,18 +97,18 @@ export const CONTENT: Record<'pt' | 'en', Translation> = {
           impact: 'Arquitetura escalável pronta para alta concorrência de agendamentos.',
           tech: ['Next.js', 'PostgreSQL', 'TypeScript', 'Prisma'],
           repoUrl: 'https://github.com/edsonvinicius1991/SaudeConecta',
-          image: 'https://picsum.photos/600/400?random=2'
+          image: 'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1765228968/FitPro_Homepage_muyfxk.png'
         },
         {
-          title: 'PetroLog Analytics (Python)',
+          title: 'EquipManager Analytics (Python)',
           category: 'data',
-          description: 'Análise preditiva de manutenção para equipamentos de extração.',
+          description: 'Análise preditiva de manutenção para equipamentos.',
           problem: 'Paradas não planejadas de equipamentos geram prejuízos milionários no setor de O&G.',
           solution: 'Script Python que processa logs de sensores, limpa os dados e aplica regressão linear para prever falhas.',
           impact: 'Modelo capaz de identificar anomalias com 85% de precisão antes da falha crítica (Simulação).',
           tech: ['Python', 'Pandas', 'Scikit-learn', 'Matplotlib'],
           repoUrl: 'https://github.com/edsonvinicius1991', 
-          image: 'https://picsum.photos/600/400?random=3'
+          image: 'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1765228516/codepage-image_mesrla.jpg'
         },
         {
           title: 'Parking Spot API',
@@ -119,10 +119,10 @@ export const CONTENT: Record<'pt' | 'en', Translation> = {
           impact: 'API documentada e padronizada, pronta para integração com múltiplos front-ends.',
           tech: ['Java', 'Spring Boot', 'MySQL', 'JPA'],
           repoUrl: 'https://github.com/edsonvinicius1991/parking-spot-control-api',
-          image: 'https://picsum.photos/600/400?random=4'
+          image: 'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1765228516/codepage-image_mesrla.jpg'
         },
         {
-          title: 'Gestão de despesas corporatativas',
+          title: 'Gestão de despesas corporativas',
           category: 'dev',
           description: 'Gerenciamento eficiente de despesas corporativas com fluxos de aprovação para colaboradores e administradores.',
           problem: 'Gestão manual e propensa a erros de controle de despesas.',
