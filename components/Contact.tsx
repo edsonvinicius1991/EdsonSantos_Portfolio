@@ -19,7 +19,7 @@ export const Contact: React.FC<ContactProps> = ({ t }) => {
             </div>
             
             <div className="flex space-x-6">
-              <a href="mailto:edsonvinicius1991@gmail.com" className="group flex flex-col items-center">
+              <a href="mailto:edsonvinicius@hotmail.com" className="group flex flex-col items-center">
                   <div className="p-3 bg-slate-800 rounded-full group-hover:bg-primary-500 transition-colors">
                     <Mail size={24} className="text-white" />
                   </div>
@@ -43,7 +43,7 @@ export const Contact: React.FC<ContactProps> = ({ t }) => {
 
         <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-slate-500 text-sm">
-            © {new Date().getFullYear()} Edson Oliveira. All rights reserved.
+            © {new Date().getFullYear()} Edson V O Santos. All rights reserved.
           </p>
           <a href="#hero" className="mt-4 md:mt-0 flex items-center text-sm text-slate-400 hover:text-white transition-colors">
             Back to Top <ChevronUp size={16} className="ml-1" />

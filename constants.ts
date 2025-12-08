@@ -120,11 +120,22 @@ export const CONTENT: Record<'pt' | 'en', Translation> = {
           tech: ['Java', 'Spring Boot', 'MySQL', 'JPA'],
           repoUrl: 'https://github.com/edsonvinicius1991/parking-spot-control-api',
           image: 'https://picsum.photos/600/400?random=4'
+        },
+        {
+          title: 'Gestão de despesas corporatativas',
+          category: 'dev',
+          description: 'Gerenciamento eficiente de despesas corporativas com fluxos de aprovação para colaboradores e administradores.',
+          problem: 'Gestão manual e propensa a erros de controle de despesas.',
+          solution: 'Relatório de Despesas Corporativas é uma aplicação web que permite o gerenciamento eficiente de despesas corporativas. O sistema oferece funcionalidades distintas para colaboradores e administradores, facilitando o processo de criação, aprovação e controle de relatórios de despesas.',
+          impact: 'API documentada e padronizada, pronta para integração com múltiplos front-ends.',
+          tech: ['Java', 'Spring Boot', 'MySQL', 'JPA'],
+          repoUrl: 'https://github.com/edsonvinicius1991/',
+          image: 'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1764715478/Banner_AmplusExpense_hhga3f.png'
         }
       ]
     },
     contact: {
-      title: 'Vamos Trabalhar Juntos?',
+      title: 'Vamos retirar seu projeto do papel?',
       text: 'Estou disponível para novos Projetos.',
       email: 'Email',
       linkedin: 'LinkedIn',
