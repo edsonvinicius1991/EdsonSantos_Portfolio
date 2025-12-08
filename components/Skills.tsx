@@ -8,6 +8,7 @@ import {
   Braces
 } from 'lucide-react';
 import { Translation, SkillMetric } from '../types';
+import { ScrollReveal } from './ScrollReveal';
 
 interface SkillsProps {
   t: Translation['skills'];
@@ -46,109 +47,121 @@ export const Skills: React.FC<SkillsProps> = ({ t, metrics }) => {
   return (
     <section id="skills" className="py-20 bg-slate-950">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-white sm:text-4xl">{t.title}</h2>
-          <div className="mt-4 w-24 h-1 bg-primary-500 mx-auto rounded-full"></div>
-        </div>
+        <ScrollReveal>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-white sm:text-4xl">{t.title}</h2>
+            <div className="mt-4 w-24 h-1 bg-primary-500 mx-auto rounded-full"></div>
+          </div>
+        </ScrollReveal>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Chart Section */}
-          <div className="lg:col-span-1 h-[300px] lg:h-auto bg-slate-900/50 rounded-xl border border-slate-800 p-4 flex flex-col justify-center items-center backdrop-blur-sm relative overflow-hidden">
-             {/* Tech decoration background */}
-             <div className="absolute inset-0 bg-grid-pattern opacity-5 pointer-events-none"></div>
-             
-             <ResponsiveContainer width="100%" height="100%">
-                <RadarChart cx="50%" cy="50%" outerRadius="80%" data={metrics}>
-                  <PolarGrid stroke="#334155" />
-                  <PolarAngleAxis dataKey="subject" tick={{ fill: '#94a3b8', fontSize: 12 }} />
-                  <PolarRadiusAxis angle={30} domain={[0, 100]} tick={false} axisLine={false} />
-                  <Radar
-                    name="Skill Level"
-                    dataKey="A"
-                    stroke="#4ade80"
-                    strokeWidth={2}
-                    fill="#4ade80"
-                    fillOpacity={0.3}
-                  />
-                  <Legend wrapperStyle={{ paddingTop: '20px' }} />
-                </RadarChart>
-             </ResponsiveContainer>
-          </div>
+          <ScrollReveal delay={0.2} className="lg:col-span-1 h-full">
+            <div className="h-[300px] lg:h-full bg-slate-900/50 rounded-xl border border-slate-800 p-4 flex flex-col justify-center items-center backdrop-blur-sm relative overflow-hidden">
+               {/* Tech decoration background */}
+               <div className="absolute inset-0 bg-grid-pattern opacity-5 pointer-events-none"></div>
+               
+               <ResponsiveContainer width="100%" height="100%">
+                  <RadarChart cx="50%" cy="50%" outerRadius="80%" data={metrics}>
+                    <PolarGrid stroke="#334155" />
+                    <PolarAngleAxis dataKey="subject" tick={{ fill: '#94a3b8', fontSize: 12 }} />
+                    <PolarRadiusAxis angle={30} domain={[0, 100]} tick={false} axisLine={false} />
+                    <Radar
+                      name="Skill Level"
+                      dataKey="A"
+                      stroke="#4ade80"
+                      strokeWidth={2}
+                      fill="#4ade80"
+                      fillOpacity={0.3}
+                    />
+                    <Legend wrapperStyle={{ paddingTop: '20px' }} />
+                  </RadarChart>
+               </ResponsiveContainer>
+            </div>
+          </ScrollReveal>
 
           {/* Grid Section */}
           <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
             
             {/* Data */}
-            <div className="bg-slate-900/80 p-6 rounded-xl border border-slate-800 hover:border-primary-500/50 transition-all hover:shadow-lg hover:shadow-primary-500/5 group">
-              <div className="flex items-center mb-4">
-                <div className="p-2 bg-slate-800 rounded-lg mr-3 group-hover:bg-primary-900/30 transition-colors">
-                  <Database className="text-primary-400" size={24} />
+            <ScrollReveal delay={0.3}>
+              <div className="bg-slate-900/80 p-6 rounded-xl border border-slate-800 hover:border-primary-500/50 transition-all hover:shadow-lg hover:shadow-primary-500/5 group h-full">
+                <div className="flex items-center mb-4">
+                  <div className="p-2 bg-slate-800 rounded-lg mr-3 group-hover:bg-primary-900/30 transition-colors">
+                    <Database className="text-primary-400" size={24} />
+                  </div>
+                  <h3 className="text-lg font-bold text-white">{t.categories.data}</h3>
                 </div>
-                <h3 className="text-lg font-bold text-white">{t.categories.data}</h3>
+                <div className="flex flex-wrap gap-2">
+                  {['Power BI', 'DAX', 'SQL', 'Python (Pandas/Numpy)', 'Azure Data'].map(s => (
+                    <span key={s} className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-slate-800 text-slate-300 text-xs font-medium rounded-full border border-slate-700 hover:border-primary-500 hover:text-white transition-all">
+                      {getTechIcon(s)}
+                      {s}
+                    </span>
+                  ))}
+                </div>
               </div>
-              <div className="flex flex-wrap gap-2">
-                {['Power BI', 'DAX', 'SQL', 'Python (Pandas/Numpy)', 'Azure Data'].map(s => (
-                  <span key={s} className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-slate-800 text-slate-300 text-xs font-medium rounded-full border border-slate-700 hover:border-primary-500 hover:text-white transition-all">
-                    {getTechIcon(s)}
-                    {s}
-                  </span>
-                ))}
-              </div>
-            </div>
+            </ScrollReveal>
 
             {/* Dev */}
-            <div className="bg-slate-900/80 p-6 rounded-xl border border-slate-800 hover:border-primary-500/50 transition-all hover:shadow-lg hover:shadow-primary-500/5 group">
-              <div className="flex items-center mb-4">
-                <div className="p-2 bg-slate-800 rounded-lg mr-3 group-hover:bg-primary-900/30 transition-colors">
-                  <Laptop2 className="text-primary-400" size={24} />
+            <ScrollReveal delay={0.4}>
+              <div className="bg-slate-900/80 p-6 rounded-xl border border-slate-800 hover:border-primary-500/50 transition-all hover:shadow-lg hover:shadow-primary-500/5 group h-full">
+                <div className="flex items-center mb-4">
+                  <div className="p-2 bg-slate-800 rounded-lg mr-3 group-hover:bg-primary-900/30 transition-colors">
+                    <Code2 className="text-primary-400" size={24} />
+                  </div>
+                  <h3 className="text-lg font-bold text-white">{t.categories.dev}</h3>
                 </div>
-                <h3 className="text-lg font-bold text-white">{t.categories.dev}</h3>
+                <div className="flex flex-wrap gap-2">
+                  {['React', 'Next.js', 'TypeScript', 'Tailwind', 'Node.js', 'Java (Spring)'].map(s => (
+                    <span key={s} className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-slate-800 text-slate-300 text-xs font-medium rounded-full border border-slate-700 hover:border-primary-500 hover:text-white transition-all">
+                      {getTechIcon(s)}
+                      {s}
+                    </span>
+                  ))}
+                </div>
               </div>
-              <div className="flex flex-wrap gap-2">
-                {['TypeScript', 'React', 'Next.js', 'Java', 'Spring Boot', 'Tailwind CSS'].map(s => (
-                  <span key={s} className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-slate-800 text-slate-300 text-xs font-medium rounded-full border border-slate-700 hover:border-primary-500 hover:text-white transition-all">
-                    {getTechIcon(s)}
-                    {s}
-                  </span>
-                ))}
-              </div>
-            </div>
+            </ScrollReveal>
 
             {/* Automation */}
-            <div className="bg-slate-900/80 p-6 rounded-xl border border-slate-800 hover:border-primary-500/50 transition-all hover:shadow-lg hover:shadow-primary-500/5 group">
-              <div className="flex items-center mb-4">
-                <div className="p-2 bg-slate-800 rounded-lg mr-3 group-hover:bg-primary-900/30 transition-colors">
-                   <Cog className="text-primary-400" size={24} />
+            <ScrollReveal delay={0.5}>
+              <div className="bg-slate-900/80 p-6 rounded-xl border border-slate-800 hover:border-primary-500/50 transition-all hover:shadow-lg hover:shadow-primary-500/5 group h-full">
+                <div className="flex items-center mb-4">
+                  <div className="p-2 bg-slate-800 rounded-lg mr-3 group-hover:bg-primary-900/30 transition-colors">
+                    <Cog className="text-primary-400" size={24} />
+                  </div>
+                  <h3 className="text-lg font-bold text-white">{t.categories.automation}</h3>
                 </div>
-                <h3 className="text-lg font-bold text-white">{t.categories.automation}</h3>
+                <div className="flex flex-wrap gap-2">
+                  {['Power Automate', 'Power Apps', 'VBA/Excel', 'SAP Scripts'].map(s => (
+                    <span key={s} className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-slate-800 text-slate-300 text-xs font-medium rounded-full border border-slate-700 hover:border-primary-500 hover:text-white transition-all">
+                      {getTechIcon(s)}
+                      {s}
+                    </span>
+                  ))}
+                </div>
               </div>
-              <div className="flex flex-wrap gap-2">
-                {['Power Automate', 'Power Apps', 'VBA', 'SAP Scripting', 'Excel Advanced'].map(s => (
-                  <span key={s} className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-slate-800 text-slate-300 text-xs font-medium rounded-full border border-slate-700 hover:border-primary-500 hover:text-white transition-all">
-                    {getTechIcon(s)}
-                    {s}
-                  </span>
-                ))}
-              </div>
-            </div>
+            </ScrollReveal>
 
             {/* QA */}
-            <div className="bg-slate-900/80 p-6 rounded-xl border border-slate-800 hover:border-primary-500/50 transition-all hover:shadow-lg hover:shadow-primary-500/5 group">
-              <div className="flex items-center mb-4">
-                <div className="p-2 bg-slate-800 rounded-lg mr-3 group-hover:bg-primary-900/30 transition-colors">
-                  <CheckCircle className="text-primary-400" size={24} />
+            <ScrollReveal delay={0.6}>
+              <div className="bg-slate-900/80 p-6 rounded-xl border border-slate-800 hover:border-primary-500/50 transition-all hover:shadow-lg hover:shadow-primary-500/5 group h-full">
+                <div className="flex items-center mb-4">
+                  <div className="p-2 bg-slate-800 rounded-lg mr-3 group-hover:bg-primary-900/30 transition-colors">
+                    <CheckCircle className="text-primary-400" size={24} />
+                  </div>
+                  <h3 className="text-lg font-bold text-white">{t.categories.qa}</h3>
                 </div>
-                <h3 className="text-lg font-bold text-white">{t.categories.qa}</h3>
+                <div className="flex flex-wrap gap-2">
+                  {['Jest', 'Cypress', 'Playwright', 'TDD/BDD'].map(s => (
+                    <span key={s} className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-slate-800 text-slate-300 text-xs font-medium rounded-full border border-slate-700 hover:border-primary-500 hover:text-white transition-all">
+                      {getTechIcon(s)}
+                      {s}
+                    </span>
+                  ))}
+                </div>
               </div>
-              <div className="flex flex-wrap gap-2">
-                {['Automated Testing', 'API Testing', 'Performance Testing', 'Jest', 'Cypress'].map(s => (
-                  <span key={s} className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-slate-800 text-slate-300 text-xs font-medium rounded-full border border-slate-700 hover:border-primary-500 hover:text-white transition-all">
-                    {getTechIcon(s)}
-                    {s}
-                  </span>
-                ))}
-              </div>
-            </div>
+            </ScrollReveal>
 
           </div>
         </div>

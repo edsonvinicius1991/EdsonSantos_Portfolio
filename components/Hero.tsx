@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { ArrowRight, Terminal } from 'lucide-react';
+import { motion } from 'framer-motion';
 import { Translation } from '../types';
 
 interface HeroProps {
@@ -41,32 +42,57 @@ export const Hero: React.FC<HeroProps> = ({ t }) => {
           <div className="text-left order-2 lg:order-1">
             
             {/* Tech Badge */}
-            <div className="mb-6 animate-fade-in-down opacity-0" style={{ animationFillMode: 'forwards', animationDelay: '0.2s', animationName: 'fade-in' }}>
+            <motion.div 
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="mb-6"
+            >
                <span className="inline-flex items-center px-3 py-1 rounded border border-primary-500/30 bg-primary-500/10 text-primary-400 text-xs font-mono tracking-wider">
                  <span className="w-1.5 h-1.5 rounded-full bg-primary-500 mr-2 animate-pulse"></span>
                  AVAILABLE FOR HIRE
                </span>
-            </div>
+            </motion.div>
             
-            <h1 className="font-sans font-bold text-5xl sm:text-6xl lg:text-7xl text-white leading-tight mb-6 tracking-tight">
+            <motion.h1 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="font-sans font-bold text-5xl sm:text-6xl lg:text-7xl text-white leading-tight mb-6 tracking-tight"
+            >
               Edson Santos
               <span className="text-primary-500">.</span>
-            </h1>
+            </motion.h1>
             
             {/* Typewriter Effect */}
-            <div className="h-8 mb-8 flex items-center">
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="h-8 mb-8 flex items-center"
+            >
               <span className="text-xl sm:text-2xl font-mono text-slate-400">
                 <span className="text-primary-500 mr-2">$</span>
                 <span className="text-slate-200">{displayText}</span>
                 <span className="inline-block w-2 h-5 ml-1 bg-primary-500 animate-pulse align-middle"></span>
               </span>
-            </div>
+            </motion.div>
             
-            <p className="text-base md:text-lg text-slate-400 mb-10 leading-relaxed max-w-xl">
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              className="text-base md:text-lg text-slate-400 mb-10 leading-relaxed max-w-xl"
+            >
               {t.description}
-            </p>
+            </motion.p>
             
-            <div className="flex flex-wrap gap-4">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              className="flex flex-wrap gap-4"
+            >
               <a
                 href="#projects"
                 className="group relative inline-flex items-center justify-center px-8 py-3.5 text-base font-medium text-white bg-primary-600 hover:bg-primary-700 rounded transition-all shadow-[0_0_20px_rgba(34,197,94,0.3)] hover:shadow-[0_0_30px_rgba(34,197,94,0.5)]"
@@ -82,11 +108,16 @@ export const Hero: React.FC<HeroProps> = ({ t }) => {
                 {t.ctaContact}
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
               </a>
-            </div>
+            </motion.div>
           </div>
 
           {/* Right Column: Tech Visuals */}
-          <div className="relative order-1 lg:order-2 flex justify-center lg:justify-end">
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="relative order-1 lg:order-2 flex justify-center lg:justify-end"
+          >
             <div className="relative w-full max-w-lg">
               {/* Abstract Glow Behind */}
               <div className="absolute -inset-1 bg-gradient-to-r from-primary-500 to-teal-500 rounded-lg blur opacity-30 animate-pulse"></div>
@@ -100,70 +131,62 @@ export const Hero: React.FC<HeroProps> = ({ t }) => {
                     <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
                     <div className="w-3 h-3 rounded-full bg-green-500"></div>
                   </div>
-                  <div className="text-xs text-slate-500 font-mono">developer.config.ts</div>
+                  <div className="text-xs text-slate-500 font-mono flex-1 text-center">portfolio.tsx</div>
                 </div>
                 
                 {/* Window Content */}
-                <div className="p-6 font-mono text-sm overflow-hidden">
-                  <div className="text-slate-300">
-                    <span className="text-purple-400">const</span> <span className="text-blue-400">developer</span> <span className="text-slate-400">=</span> <span className="text-yellow-400">{`{`}</span>
-                  </div>
-                  <div className="pl-4 text-slate-300">
-                    <span className="text-slate-400">name:</span> <span className="text-green-400">'Edson Santos'</span><span className="text-slate-400">,</span>
-                  </div>
-                  <div className="pl-4 text-slate-300">
-                    <span className="text-slate-400">role:</span> <span className="text-green-400">'Full Stack Dev'</span><span className="text-slate-400">,</span>
-                  </div>
-                   <div className="pl-4 text-slate-300">
-                    <span className="text-slate-400">skills:</span> <span className="text-yellow-400">['React', 'Node', 'Python', 'Data']</span><span className="text-slate-400">,</span>
-                  </div>
-                  <div className="pl-4 text-slate-300">
-                    <span className="text-slate-400">hardWorker:</span> <span className="text-orange-400">true</span><span className="text-slate-400">,</span>
-                  </div>
-                   <div className="pl-4 text-slate-300">
-                    <span className="text-slate-400">quickLearner:</span> <span className="text-orange-400">true</span><span className="text-slate-400">,</span>
-                  </div>
-                   <div className="pl-4 text-slate-300">
-                    <span className="text-purple-400">hire</span><span className="text-slate-400">:</span> <span className="text-blue-400">function</span><span className="text-yellow-400">()</span> <span className="text-yellow-400">{`{`}</span>
-                  </div>
-                  <div className="pl-8 text-slate-300">
-                    <span className="text-purple-400">return</span> <span className="text-green-400">"Let's build the future!"</span>
-                  </div>
-                   <div className="pl-4 text-slate-300">
-                    <span className="text-yellow-400">{`}`}</span>
-                  </div>
-                  <div className="text-slate-300">
-                    <span className="text-yellow-400">{`}`}</span>
+                <div className="p-6 font-mono text-sm overflow-x-auto">
+                  <div className="space-y-2">
+                    <div className="text-slate-400">
+                      <span className="text-purple-400">const</span> <span className="text-yellow-300">developer</span> = {'{'}
+                    </div>
+                    <div className="pl-4 text-slate-300">
+                      <span className="text-blue-400">name</span>: <span className="text-green-400">"Edson Santos"</span>,
+                    </div>
+                    <div className="pl-4 text-slate-300">
+                      <span className="text-blue-400">role</span>: <span className="text-green-400">"Full Stack Dev"</span>,
+                    </div>
+                    <div className="pl-4 text-slate-300">
+                      <span className="text-blue-400">skills</span>: [
+                    </div>
+                    <div className="pl-8 text-green-400">
+                      "React", "Node.js", "Python",
+                    </div>
+                    <div className="pl-8 text-green-400">
+                      "SQL", "Power BI", "AWS"
+                    </div>
+                    <div className="pl-4 text-slate-300">],</div>
+                    <div className="pl-4 text-slate-300">
+                      <span className="text-blue-400">hardWorker</span>: <span className="text-orange-400">true</span>,
+                    </div>
+                    <div className="pl-4 text-slate-300">
+                      <span className="text-blue-400">quickLearner</span>: <span className="text-orange-400">true</span>
+                    </div>
+                    <div className="text-slate-400">{'}'};</div>
                   </div>
                 </div>
               </div>
-              
-              {/* Floating Elements */}
-              <div className="absolute -right-8 -bottom-8 bg-slate-800 p-4 rounded-lg border border-slate-700 shadow-xl hidden md:block animate-bounce" style={{ animationDuration: '3s' }}>
-                 <div className="flex items-center gap-3">
-                    <div className="bg-green-500/20 p-2 rounded-lg">
-                       <Terminal size={20} className="text-green-500" />
-                    </div>
-                    <div>
-                       <div className="text-xs text-slate-400">Status</div>
-                       <div className="text-sm font-bold text-white">System Online</div>
-                    </div>
-                 </div>
-              </div>
 
+              {/* Floating Badge 1 */}
+              <motion.div 
+                animate={{ y: [0, -10, 0] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute -right-4 -bottom-4 bg-slate-800 p-4 rounded-lg border border-slate-700 shadow-xl hidden sm:block"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="bg-green-500/20 p-2 rounded-full">
+                    <Terminal size={20} className="text-green-500" />
+                  </div>
+                  <div>
+                    <div className="text-xs text-slate-400">Status</div>
+                    <div className="text-sm font-bold text-white">Online & Coding</div>
+                  </div>
+                </div>
+              </motion.div>
             </div>
-          </div>
-
+          </motion.div>
         </div>
       </div>
-      
-      {/* CSS for simple fade-in animation */}
-      <style>{`
-        @keyframes fade-in {
-          from { opacity: 0; transform: translateY(10px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-      `}</style>
     </section>
   );
 };
