@@ -46,6 +46,9 @@ export interface Translation {
     email: string;
     linkedin: string;
     github: string;
+    whatsapp: string;
+    copyright: string;
+    backToTop: string;
   };
 }
 

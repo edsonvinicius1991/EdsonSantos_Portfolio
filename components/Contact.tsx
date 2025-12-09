@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Linkedin, Github, ChevronUp } from 'lucide-react';
+import { Mail, Linkedin, Github, ChevronUp, MessageCircle } from 'lucide-react';
 import { Translation } from '../types';
 import { ScrollReveal } from './ScrollReveal';
 
@@ -36,6 +36,12 @@ export const Contact: React.FC<ContactProps> = ({ t }) => {
                     <Github size={24} className="text-white" />
                   </div>
                   <span className="mt-2 text-sm text-slate-400 group-hover:text-primary-400">{t.github}</span>
+              </a>
+              <a href="https://wa.me/5522999632215" target="_blank" rel="noreferrer" className="group flex flex-col items-center">
+                  <div className="p-3 bg-slate-800 rounded-full group-hover:bg-green-500 transition-colors">
+                    <MessageCircle size={24} className="text-white" />
+                  </div>
+                  <span className="mt-2 text-sm text-slate-400 group-hover:text-green-400">{t.whatsapp}</span>
               </a>
             </div>
           </div>

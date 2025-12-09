@@ -150,7 +150,8 @@ export const CONTENT: Record<'pt' | 'en', Translation> = {
       text: 'Estou disponível para novos Projetos.',
       email: 'Email',
       linkedin: 'LinkedIn',
-      github: 'GitHub'
+      github: 'GitHub',
+      whatsapp: 'WhatsApp'
     }
   },
   en: {
@@ -293,7 +294,10 @@ export const CONTENT: Record<'pt' | 'en', Translation> = {
       text: 'I am available for new opportunities as a Developer or Data Analyst.',
       email: 'Email',
       linkedin: 'LinkedIn',
-      github: 'GitHub'
+      github: 'GitHub',
+      whatsapp: 'WhatsApp',
+      copyright: 'All rights reserved.',
+      backToTop: 'Back to Top'
     }
   }
 };
