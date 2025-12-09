@@ -221,37 +221,48 @@ export const CONTENT: Record<'pt' | 'en', Translation> = {
       viewDemo: 'Demo',
       items: [
         {
-          title: 'Nutri Plan Meals',
+          title: 'Armazem Vivo - Warehouse Management System',
           category: 'dev',
-          description: 'Comprehensive platform for nutritional planning and diet tracking.',
-          problem: 'Difficulty for nutritionists and patients to maintain communication flow and diet adherence.',
-          solution: 'SaaS development using Supabase for real-time backend and secure auth.',
-          impact: 'Streamlined meal plan management with a responsive interface.',
+          description: '**Armazém Vivo** is a responsive web application to operate and control end-to-end warehouse processes, reducing errors, improving stock accuracy, and increasing operational productivity.',
+          problem: 'Warehouse management is complex and often inefficient, with frequent errors and lack of inventory control.',
+          solution: 'The solution consolidates receiving, storage, picking, packing, shipping, transfers, and inventory operations, with management dashboards for quick decision-making.',
+          impact: '**Armazém Vivo** reduced errors by up to 30% and improved inventory control accuracy, boosting operational productivity by 20%.',
           tech: ['TypeScript', 'React', 'Supabase', 'Tailwind'],
-          repoUrl: 'https://github.com/edsonvinicius1991/nutri-plan-meals',
-          image: 'https://picsum.photos/600/400?random=1'
+          repoUrl: 'https://github.com/edsonvinicius1991/armazem-vivo',
+          image: 'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1760544999/WMS-dashboard1_cg2l8s.png'
         },
         {
-          title: 'Saúde Conecta',
+          title: 'Nutrix - Nutritional Practice Management System',
           category: 'dev',
-          description: 'Marketplace connecting healthcare professionals to patients.',
-          problem: 'Fragmentation in accessing qualified health specialists.',
+          description: 'Complete platform for nutritional planning and diet monitoring.',
+          problem: 'Difficulty for nutritionists and patients to maintain a communication flow and adherence to the dietary plan.',
+          solution: 'Development of a SaaS with Supabase for real-time backend, intelligent chatbot with generative AI, and secure JWT authentication.',
+          impact: 'Facilitated meal plan management with a responsive interface and centralized data.',
+          tech: ['TypeScript', 'React', 'Supabase', 'Tailwind'],
+          repoUrl: 'https://github.com/edsonvinicius1991/nutri-plan-meals',
+          image: 'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1760623631/NutriPlan_-_index_dmn7ju.png'
+        },
+        {
+          title: 'Expert Trainers',
+          category: 'dev',
+          description: 'Marketplace connecting physical health professionals to patients.',
+          problem: 'Fragmentation in access to qualified health specialists.',
           solution: 'Next.js application with SSR for optimized SEO and robust relational database.',
           impact: 'Scalable architecture ready for high scheduling concurrency.',
           tech: ['Next.js', 'PostgreSQL', 'TypeScript', 'Prisma'],
           repoUrl: 'https://github.com/edsonvinicius1991/SaudeConecta',
-          image: 'https://picsum.photos/600/400?random=2'
+          image: 'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1765228968/FitPro_Homepage_muyfxk.png'
         },
         {
-          title: 'PetroLog Analytics (Python)',
+          title: 'EquipManager Analytics (Python)',
           category: 'data',
-          description: 'Predictive maintenance analysis for extraction equipment.',
+          description: 'Predictive maintenance analysis for equipment.',
           problem: 'Unplanned equipment downtime causes millions in losses in the O&G sector.',
-          solution: 'Python script processing sensor logs, cleaning data, and applying linear regression.',
+          solution: 'Python script processing sensor logs, cleaning data, and applying linear regression to predict failures.',
           impact: 'Model capable of identifying anomalies with 85% accuracy before critical failure (Simulation).',
           tech: ['Python', 'Pandas', 'Scikit-learn', 'Matplotlib'],
-          repoUrl: 'https://github.com/edsonvinicius1991',
-          image: 'https://picsum.photos/600/400?random=3'
+          repoUrl: 'https://github.com/edsonvinicius1991', 
+          image: 'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1765228516/codepage-image_mesrla.jpg'
         },
         {
           title: 'Parking Spot API',
@@ -262,7 +273,18 @@ export const CONTENT: Record<'pt' | 'en', Translation> = {
           impact: 'Standardized and documented API ready for multi-frontend integration.',
           tech: ['Java', 'Spring Boot', 'MySQL', 'JPA'],
           repoUrl: 'https://github.com/edsonvinicius1991/parking-spot-control-api',
-          image: 'https://picsum.photos/600/400?random=4'
+          image: 'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1765228516/codepage-image_mesrla.jpg'
+        },
+        {
+          title: 'Corporate Expense Management',
+          category: 'dev',
+          description: 'Efficient corporate expense management with approval flows for employees and administrators.',
+          problem: 'Manual and error-prone expense control management.',
+          solution: 'Corporate Expense Report is a web application allowing efficient management of corporate expenses. The system offers distinct features for employees and administrators, facilitating the process of creating, approving, and controlling expense reports.',
+          impact: 'Standardized and documented API ready for multi-frontend integration.',
+          tech: ['Java', 'Spring Boot', 'MySQL', 'JPA'],
+          repoUrl: 'https://github.com/edsonvinicius1991/',
+          image: 'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1764715478/Banner_AmplusExpense_hhga3f.png'
         }
       ]
     },
