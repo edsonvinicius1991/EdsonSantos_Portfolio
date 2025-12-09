@@ -1,15 +1,30 @@
-import React from 'react';
-import { ExternalLink, Github, Code, TrendingUp, AlertCircle } from 'lucide-react';
-import { Translation } from '../types';
+import React, { useState } from 'react';
+import { ExternalLink, Github, Code, TrendingUp, AlertCircle, Eye } from 'lucide-react';
+import { Translation, ProjectItem } from '../types';
 import { ScrollReveal } from './ScrollReveal';
+import { ProjectModal } from './ProjectModal';
 
 interface ProjectsProps {
   t: Translation['projects'];
 }
 
 export const Projects: React.FC<ProjectsProps> = ({ t }) => {
+  const [selectedProject, setSelectedProject] = useState<ProjectItem | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = (project: ProjectItem) => {
+    setSelectedProject(project);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    // Optional: clear selected project after animation, but keeping it prevents content jump during close
+  };
+
   return (
     <section id="projects" className="py-20 bg-slate-950">
+      <ProjectModal project={selectedProject} isOpen={isModalOpen} onClose={closeModal} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal>
           <div className="text-center mb-16">
@@ -24,13 +39,21 @@ export const Projects: React.FC<ProjectsProps> = ({ t }) => {
               <div className="group relative bg-slate-900 rounded-xl overflow-hidden border border-slate-800 hover:border-primary-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary-900/10 h-full flex flex-col">
                 
                 {/* Image Header */}
-                <div className="h-48 w-full bg-slate-800 overflow-hidden relative flex-shrink-0">
-                  <div className="absolute inset-0 bg-slate-900/60 group-hover:bg-slate-900/40 transition-all z-10" />
+                <div 
+                  className="h-48 w-full bg-slate-800 overflow-hidden relative flex-shrink-0 cursor-pointer group/image"
+                  onClick={() => openModal(project)}
+                >
+                  <div className="absolute inset-0 bg-slate-900/60 group-hover/image:bg-slate-900/40 transition-all z-10" />
                   <img 
                     src={project.image} 
                     alt={project.title} 
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover transform group-hover/image:scale-105 transition-transform duration-500"
                   />
+                  <div className="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover/image:opacity-100 transition-opacity duration-300">
+                    <span className="bg-slate-900/80 text-white px-4 py-2 rounded-full flex items-center backdrop-blur-sm border border-slate-700">
+                      <Eye size={16} className="mr-2" /> View Details
+                    </span>
+                  </div>
                   <div className="absolute top-4 right-4 z-20 flex space-x-2">
                     <span className={`px-2 py-1 text-xs font-bold uppercase rounded text-white
                       ${project.category === 'data' ? 'bg-purple-600' : project.category === 'qa' ? 'bg-orange-600' : 'bg-blue-600'}`}>

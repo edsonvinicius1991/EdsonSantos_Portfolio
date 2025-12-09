@@ -76,6 +76,8 @@ export interface ProjectItem {
   repoUrl: string;
   demoUrl?: string;
   image?: string;
+  gallery?: string[];
+  longDescription?: string;
   category: 'dev' | 'data' | 'qa';
 }
 

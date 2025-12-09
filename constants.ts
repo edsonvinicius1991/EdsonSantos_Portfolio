@@ -86,7 +86,14 @@ export const CONTENT: Record<'pt' | 'en', Translation> = {
           impact: 'O **Armazém Vivo** reduziu erros em até 30% e melhorou a precisão do controle de estoque, aumentando a produtividade operacional em 20%.',
           tech: ['TypeScript', 'React', 'Supabase', 'Tailwind'],
           repoUrl: 'https://github.com/edsonvinicius1991/armazem-vivo',
-          image: 'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1760544999/WMS-dashboard1_cg2l8s.png'
+          image: 'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1760544999/WMS-dashboard1_cg2l8s.png',
+          gallery: [
+            'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1760566472/responsividade_nfjrvw.png',
+            'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1760545000/WMS-auth_z0cp3p.png',
+            'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1760544999/WMS-dashboard1_cg2l8s.png',
+            'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1760544999/WMS-dashboard2_olk0b4.png',
+            'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1760544999/WMS-produtos_fpjv38.png'
+          ]
         },
         {
           title: 'Nutrix - Sistema de Gestão de rotinas de Consultório Nutricional',
@@ -97,7 +104,13 @@ export const CONTENT: Record<'pt' | 'en', Translation> = {
           impact: 'Facilitou a gestão de planos alimentares com interface responsiva e dados centralizados.',
           tech: ['TypeScript', 'React', 'Supabase', 'Tailwind'],
           repoUrl: 'https://github.com/edsonvinicius1991/nutri-plan-meals',
-          image: 'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1760623631/NutriPlan_-_index_dmn7ju.png'
+          image: 'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1760623631/NutriPlan_-_index_dmn7ju.png',
+          gallery: [
+            'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1760623631/NutriPlan_-_index_dmn7ju.png',
+            'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1760623630/NutriPlan_-_index2_xiqz1h.png',
+            'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1760623630/NutriPlan_-_Painel_ADM_qomj02.png',
+            'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1760623630/NutriPlan_-_Dashboard_Nutri_zvmlqe.png'
+          ]
         },
         {
           title: 'Expert Trainers',
@@ -141,7 +154,15 @@ export const CONTENT: Record<'pt' | 'en', Translation> = {
           impact: 'API documentada e padronizada, pronta para integração com múltiplos front-ends.',
           tech: ['Java', 'Spring Boot', 'MySQL', 'JPA'],
           repoUrl: 'https://github.com/edsonvinicius1991/',
-          image: 'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1764715478/Banner_AmplusExpense_hhga3f.png'
+          image: 'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1764715478/Banner_AmplusExpense_hhga3f.png',
+          gallery: [
+            'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1764715478/Banner_AmplusExpense_hhga3f.png',
+            'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1764715476/AmplusExpense_HomePage_ihnd1t.png',
+            'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1764715476/AmplusExpense_AdminDashboard2_drqwf4.png',
+            'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1764715476/AmplusExpense_ColaboradorDashboard_ga9pfz.png',
+            'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1764715476/AmplusExpense_NewReport_kvaxwb.png',
+            'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1764715476/AmplusExpense_AdminDashboard_eeginp.png'
+          ]
         }
       ]
     },
@@ -230,7 +251,14 @@ export const CONTENT: Record<'pt' | 'en', Translation> = {
           impact: '**Armazém Vivo** reduced errors by up to 30% and improved inventory control accuracy, boosting operational productivity by 20%.',
           tech: ['TypeScript', 'React', 'Supabase', 'Tailwind'],
           repoUrl: 'https://github.com/edsonvinicius1991/armazem-vivo',
-          image: 'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1760544999/WMS-dashboard1_cg2l8s.png'
+          image: 'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1760544999/WMS-dashboard1_cg2l8s.png',
+          gallery: [
+            'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1760566472/responsividade_nfjrvw.png',
+            'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1760545000/WMS-auth_z0cp3p.png',
+            'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1760544999/WMS-dashboard1_cg2l8s.png',
+            'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1760544999/WMS-dashboard2_olk0b4.png',
+            'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1760544999/WMS-produtos_fpjv38.png'
+          ]
         },
         {
           title: 'Nutrix - Nutritional Practice Management System',
@@ -241,7 +269,13 @@ export const CONTENT: Record<'pt' | 'en', Translation> = {
           impact: 'Facilitated meal plan management with a responsive interface and centralized data.',
           tech: ['TypeScript', 'React', 'Supabase', 'Tailwind'],
           repoUrl: 'https://github.com/edsonvinicius1991/nutri-plan-meals',
-          image: 'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1760623631/NutriPlan_-_index_dmn7ju.png'
+          image: 'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1760623631/NutriPlan_-_index_dmn7ju.png',
+          gallery: [
+            'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1760623631/NutriPlan_-_index_dmn7ju.png',
+            'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1760623630/NutriPlan_-_index2_xiqz1h.png',
+            'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1760623630/NutriPlan_-_Painel_ADM_qomj02.png',
+            'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1760623630/NutriPlan_-_Dashboard_Nutri_zvmlqe.png'
+          ]
         },
         {
           title: 'Expert Trainers',
@@ -285,7 +319,15 @@ export const CONTENT: Record<'pt' | 'en', Translation> = {
           impact: 'Standardized and documented API ready for multi-frontend integration.',
           tech: ['Java', 'Spring Boot', 'MySQL', 'JPA'],
           repoUrl: 'https://github.com/edsonvinicius1991/',
-          image: 'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1764715478/Banner_AmplusExpense_hhga3f.png'
+          image: 'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1764715478/Banner_AmplusExpense_hhga3f.png',
+          gallery: [
+            'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1764715478/Banner_AmplusExpense_hhga3f.png',
+            'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1764715476/AmplusExpense_HomePage_ihnd1t.png',
+            'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1764715476/AmplusExpense_AdminDashboard2_drqwf4.png',
+            'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1764715476/AmplusExpense_ColaboradorDashboard_ga9pfz.png',
+            'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1764715476/AmplusExpense_NewReport_kvaxwb.png',
+            'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1764715476/AmplusExpense_AdminDashboard_eeginp.png'
+          ]
         }
       ]
     },
