@@ -21,7 +21,7 @@ export const CONTENT: Record<'pt' | 'en', Translation> = {
     hero: {
       greeting: 'Edson Santos',
       role: 'Desenvolvimento de Software & Análise de Dados',
-      description: 'Transformo dados complexos em decisões estratégicas e construo aplicações robustas. Especialista na convergência entre Desenvolvimento Full-Stack, Power Platform e Garantia da Qualidade.',
+      description: 'Transformo dados complexos em decisões estratégicas e construo aplicações robustas. Especialista na convergência entre Desenvolvimento Full-Stack, Power Platform e Automações de processos.',
       ctaProject: 'Ver Projetos',
       ctaContact: 'Vamos Conversar',
     },
@@ -52,23 +52,23 @@ export const CONTENT: Record<'pt' | 'en', Translation> = {
           company: 'SONDA',
           period: 'Mar 2025 - Presente',
           description: [
-            'Lidero o desenvolvimento de soluções integradas utilizando Microsoft Power Platform.',
-            'Desenvolvo scripts de automação (SAP, Python, VBA) que reduzem o tempo operacional em até 40%.',
-            'Responsável pelo ciclo completo de dados (ETL, Modelagem) e dashboards gerenciais para tomada de decisão.',
-            'Atuo na análise de requisitos e mapeamento de processos complexos.'
+            'Desenvolvimento de soluções integradas utilizando Microsoft Power Platform.',
+            'Desenvolvimento scripts de automação (SAP, Python, VBA) que reduzem o tempo operacional em processos complexos.',
+            'Realiazação de ciclo completo de dados (ETL, Modelagem) e dashboards gerenciais para tomada de decisão.',
+            'Atuação na análise de requisitos e mapeamento de processos complexos.'
           ],
           tech: ['Power BI', 'Power Apps', 'Python', 'SAP Scripting', 'SQL']
         },
         {
-          role: 'Consultor de QA',
+          role: 'Consultor de Qualidade de Software',
           company: 'Autônomo',
           period: 'Fev 2023 - Presente',
           description: [
-            'Consultoria especializada em qualidade de software para Web Apps e plataformas Low-code.',
+            'Consultoria especializada em qualidade  de software ponta a ponta para Web Apps e plataformas Low-code.',
             'Implementação de estratégias de testes automatizados e de performance.',
             'Triagem de defeitos orientada a dados para priorização eficiente de correções.'
           ],
-          tech: ['TypeScript', 'Jest', 'Cypress', 'OutSystems', 'PostgreSQL']
+          tech: ['TypeScript', 'Java', 'JavaScript', 'Jest', 'Cypress', 'OutSystems', 'PostgreSQL']
         }
       ]
     },
@@ -78,20 +78,31 @@ export const CONTENT: Record<'pt' | 'en', Translation> = {
       viewDemo: 'Demo',
       items: [
         {
-          title: 'Nutri Plan Meals',
+          title: 'Armazem Vivo - Sistema de Gestão de Almoxarifados',
+          category: 'dev',
+          description: 'O **Armazém Vivo** é uma aplicação web responsiva para operar e controlar processos de almoxarifado ponta a ponta, reduzindo erros, melhorando acurácia de estoque e aumentando produtividade operacional.',
+          problem: 'A gestão de almoxarifados é complexa e fraca, com erros frequentes e falta de controle de estoque.',
+          solution: 'A solução consolida operações de recebimento, armazenagem, separação, packing, expedição, transferências e inventário, com relatórios e dashboards gerenciais para decisão rápida.',
+          impact: 'O **Armazém Vivo** reduziu erros em até 30% e melhorou a precisão do controle de estoque, aumentando a produtividade operacional em 20%.',
+          tech: ['TypeScript', 'React', 'Supabase', 'Tailwind'],
+          repoUrl: 'https://github.com/edsonvinicius1991/armazem-vivo',
+          image: 'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1760544999/WMS-dashboard1_cg2l8s.png'
+        },
+        {
+          title: 'Nutrix - Sistema de Gestão de rotinas de Consultório Nutricional',
           category: 'dev',
           description: 'Plataforma completa para planejamento nutricional e acompanhamento de dietas.',
           problem: 'Dificuldade de nutricionistas e pacientes em manterem um fluxo de comunicação e adesão ao plano alimentar.',
-          solution: 'Desenvolvimento de um SaaS utilizando Supabase para backend em tempo real e autenticação segura.',
+          solution: 'Desenvolvimento de um SaaS com Supabase para backend em tempo real, chatbot inteligente com IA generativa e autenticação JWT segura.',
           impact: 'Facilitou a gestão de planos alimentares com interface responsiva e dados centralizados.',
           tech: ['TypeScript', 'React', 'Supabase', 'Tailwind'],
           repoUrl: 'https://github.com/edsonvinicius1991/nutri-plan-meals',
           image: 'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1760623631/NutriPlan_-_index_dmn7ju.png'
         },
         {
-          title: 'Saúde Conecta',
+          title: 'Expert Trainers',
           category: 'dev',
-          description: 'Marketplace conectando profissionais de saúde a pacientes.',
+          description: 'Marketplace conectando profissionais de saúde físíca a pacientes.',
           problem: 'Fragmentation no acesso a especialistas de saúde qualificados.',
           solution: 'Aplicação Next.js com SSR para SEO otimizado e banco de dados relacional robusto.',
           impact: 'Arquitetura escalável pronta para alta concorrência de agendamentos.',
@@ -180,7 +191,7 @@ export const CONTENT: Record<'pt' | 'en', Translation> = {
       title: 'Professional Journey',
       items: [
         {
-          role: 'Software Developer III',
+          role: 'Software Developer Senior - Data Specialist',
           company: 'SONDA',
           period: 'Mar 2025 - Present',
           description: [
@@ -192,7 +203,7 @@ export const CONTENT: Record<'pt' | 'en', Translation> = {
           tech: ['Power BI', 'Power Apps', 'Python', 'SAP Scripting', 'SQL']
         },
         {
-          role: 'QA Consultant',
+          role: 'Software QA Consultant',
           company: 'Freelance',
           period: 'Feb 2023 - Present',
           description: [

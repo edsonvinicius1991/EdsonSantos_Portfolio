@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { ArrowRight, Terminal } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Translation } from '../types';
+import ParticleBackground from './ParticleBackground';
 
 interface HeroProps {
   t: Translation['hero'];
@@ -31,7 +32,8 @@ export const Hero: React.FC<HeroProps> = ({ t }) => {
       
       {/* Background: Tech Grid & Glow */}
       <div className="absolute inset-0 w-full h-full bg-slate-950">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+        <ParticleBackground />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none"></div>
         <div className="absolute left-0 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-primary-500 opacity-20 blur-[100px]"></div>
       </div>
 
