@@ -10,7 +10,7 @@ import { CONTENT, SKILL_METRICS } from './constants';
 import { Language } from './types';
 
 const App: React.FC = () => {
-  const [lang, setLang] = useState<Language>('pt');
+  const [lang, setLang] = useState<Language>('en');
   
   // Get current translation
   const t = CONTENT[lang];

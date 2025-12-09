@@ -13,18 +13,28 @@ export const Hero: React.FC<HeroProps> = ({ t }) => {
   const fullText = t.role;
 
   useEffect(() => {
-    let index = 0;
+    // Reset state immediately when fullText changes
     setDisplayText('');
     
-    const intervalId = setInterval(() => {
-      setDisplayText((prev) => prev + fullText.charAt(index));
-      index++;
-      if (index === fullText.length) {
-        clearInterval(intervalId);
-      }
-    }, 50);
+    // Delay start to match motion.div transition delay (0.4s) + slight buffer
+    const startDelay = setTimeout(() => {
+      let currentIndex = 0;
+      
+      const intervalId = setInterval(() => {
+        if (currentIndex < fullText.length) {
+          // Use slice for deterministic updates, avoiding dependency on previous state
+          setDisplayText(fullText.slice(0, currentIndex + 1));
+          currentIndex++;
+        } else {
+          clearInterval(intervalId);
+        }
+      }, 50); // Typing speed
 
-    return () => clearInterval(intervalId);
+      // Cleanup interval on unmount or re-run
+      return () => clearInterval(intervalId);
+    }, 450); // 400ms delay from motion.div + 50ms buffer
+
+    return () => clearTimeout(startDelay);
   }, [fullText]);
 
   return (
