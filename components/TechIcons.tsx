@@ -25,5 +25,13 @@ export const PowerPlatformIcon = ({ className = "" }: { className?: string }) =>
 );
 
 export const OutSystemsIcon = ({ className = "" }: { className?: string }) => (
-  <img src="https://cdn.simpleicons.org/outsystems" alt="OutSystems" className={className} />
+  <svg
+    viewBox="0 0 96 96"
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+    aria-label="OutSystems"
+  >
+    <circle cx="48" cy="48" r="32" fill="#E83A2B" />
+    <circle cx="48" cy="48" r="16" fill="#FFFFFF" />
+  </svg>
 );
