@@ -342,7 +342,22 @@ export const CONTENT: Record<'pt' | 'en', Translation> = {
             'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1760544999/WMS-dashboard1_cg2l8s.png',
             'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1760544999/WMS-dashboard2_olk0b4.png',
             'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1760544999/WMS-produtos_fpjv38.png'
-          ]
+          ],
+          features: [
+            'Inventory control',
+            'Product management',
+            'Responsive web interface'
+          ],
+          architecture: {
+            frontend: [
+              'React',
+              'TypeScript',
+              'Tailwind CSS'
+            ],
+            backend: [
+              'Supabase'
+            ]
+          }
         },
         {
           title: 'Nutrix - Nutritional Practice Management System',
@@ -359,7 +374,36 @@ export const CONTENT: Record<'pt' | 'en', Translation> = {
             'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1760623630/NutriPlan_-_index2_xiqz1h.png',
             'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1760623630/NutriPlan_-_Painel_ADM_qomj02.png',
             'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1760623630/NutriPlan_-_Dashboard_Nutri_zvmlqe.png'
-          ]
+          ],
+          features: [
+            'Complete patient management with digital records',
+            'Intelligent scheduling system with automatic notifications',
+            'Structured and customizable digital anamnesis',
+            'Anthropometric assessment with multiple protocols',
+            'AI-powered body composition analysis',
+            'Dashboard with metrics and visualizations'
+          ],
+          architecture: {
+            frontend: [
+              'React 18.3.1 + TypeScript 5.8.3',
+              'Vite 5.4.19',
+              'Tailwind CSS 3.4.17',
+              'shadcn/ui + Radix UI',
+              'Zustand (State Management)',
+              'React Hook Form + Zod'
+            ],
+            backend: [
+              'Supabase (BaaS)',
+              'PostgreSQL 15+',
+              'Edge Functions (Deno/TS)'
+            ],
+            security: [
+              'Supabase Auth (2FA)',
+              'Row Level Security (RLS)',
+              'AES-256 Encryption',
+              'RBAC (Role-Based Access Control)'
+            ]
+          }
         },
         {
           title: 'Expert Trainers',
@@ -370,7 +414,32 @@ export const CONTENT: Record<'pt' | 'en', Translation> = {
           impact: 'Scalable architecture ready for high scheduling concurrency.',
           tech: ['Next.js', 'PostgreSQL', 'TypeScript', 'Prisma'],
           repoUrl: 'https://github.com/edsonvinicius1991/SaudeConecta',
-          image: 'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1765228968/FitPro_Homepage_muyfxk.png'
+          image: 'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1765228968/FitPro_Homepage_muyfxk.png',
+          features: [
+            'Advanced search with filters and geolocation',
+            'Public professional profile with gallery and reviews',
+            'Separate dashboards for professional and client',
+            'Complete review and favorites system',
+            'Health article blog and multi-step onboarding'
+          ],
+          architecture: {
+            frontend: [
+              'React 18 + TypeScript + Vite',
+              'Wouter (Routing)',
+              'Tailwind CSS + Radix UI',
+              'React Query + React Hook Form'
+            ],
+            backend: [
+              'Supabase (PostgreSQL, Auth, Storage)',
+              'Modelo relacional com JSONB',
+              'Row Level Security (RLS)'
+            ],
+            integrations: [
+              'ViaCEP',
+              'Google Maps / Leaflet',
+              'Supabase Storage'
+            ]
+          }
         },
         {
           title: 'EquipManager Analytics (Python)',
@@ -411,7 +480,22 @@ export const CONTENT: Record<'pt' | 'en', Translation> = {
             'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1764715476/AmplusExpense_ColaboradorDashboard_ga9pfz.png',
             'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1764715476/AmplusExpense_NewReport_kvaxwb.png',
             'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1764715476/AmplusExpense_AdminDashboard_eeginp.png'
-          ]
+          ],
+          features: [
+            'Expense recording and categorization',
+            'Graphical visualizations with Recharts',
+            'Responsive and modern interface',
+            'Budget management and approval workflows'
+          ],
+          architecture: {
+            frontend: [
+              'React 18.2.0',
+              'Vite 4.4.5',
+              'Tailwind CSS 3.3.3',
+              'Radix UI + Framer Motion',
+              'Recharts 2.9.0'
+            ]
+          }
         }
       ]
     },
