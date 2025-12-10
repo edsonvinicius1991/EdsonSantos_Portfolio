@@ -78,6 +78,13 @@ export interface ProjectItem {
   image?: string;
   gallery?: string[];
   longDescription?: string;
+  features?: string[];
+  architecture?: {
+    frontend?: string[];
+    backend?: string[];
+    integrations?: string[];
+    security?: string[];
+  };
   category: 'dev' | 'data' | 'qa';
 }
 

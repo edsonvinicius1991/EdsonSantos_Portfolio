@@ -93,7 +93,22 @@ export const CONTENT: Record<'pt' | 'en', Translation> = {
             'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1760544999/WMS-dashboard1_cg2l8s.png',
             'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1760544999/WMS-dashboard2_olk0b4.png',
             'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1760544999/WMS-produtos_fpjv38.png'
-          ]
+          ],
+          features: [
+            'Controle de inventário',
+            'Gestão de produtos',
+            'Interface web responsiva'
+          ],
+          architecture: {
+            frontend: [
+              'React',
+              'TypeScript',
+              'Tailwind CSS'
+            ],
+            backend: [
+              'Supabase'
+            ]
+          }
         },
         {
           title: 'Nutrix - Sistema de Gestão de rotinas de Consultório Nutricional',
@@ -110,7 +125,36 @@ export const CONTENT: Record<'pt' | 'en', Translation> = {
             'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1760623630/NutriPlan_-_index2_xiqz1h.png',
             'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1760623630/NutriPlan_-_Painel_ADM_qomj02.png',
             'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1760623630/NutriPlan_-_Dashboard_Nutri_zvmlqe.png'
-          ]
+          ],
+          features: [
+            'Gestão completa de pacientes com prontuários digitais',
+            'Sistema de agendamento inteligente com notificações automáticas',
+            'Anamnese digital estruturada e personalizável',
+            'Avaliação antropométrica com múltiplos protocolos',
+            'Análise de composição corporal com IA',
+            'Dashboard com métricas e visualizações'
+          ],
+          architecture: {
+            frontend: [
+              'React 18.3.1 + TypeScript 5.8.3',
+              'Vite 5.4.19',
+              'Tailwind CSS 3.4.17',
+              'shadcn/ui + Radix UI',
+              'Zustand (State Management)',
+              'React Hook Form + Zod'
+            ],
+            backend: [
+              'Supabase (BaaS)',
+              'PostgreSQL 15+',
+              'Edge Functions (Deno/TS)'
+            ],
+            security: [
+              'Supabase Auth (2FA)',
+              'Row Level Security (RLS)',
+              'AES-256 Encryption',
+              'RBAC (Role-Based Access Control)'
+            ]
+          }
         },
         {
           title: 'Expert Trainers',
@@ -121,7 +165,32 @@ export const CONTENT: Record<'pt' | 'en', Translation> = {
           impact: 'Arquitetura escalável pronta para alta concorrência de agendamentos.',
           tech: ['Next.js', 'PostgreSQL', 'TypeScript', 'Prisma'],
           repoUrl: 'https://github.com/edsonvinicius1991/SaudeConecta',
-          image: 'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1765228968/FitPro_Homepage_muyfxk.png'
+          image: 'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1765228968/FitPro_Homepage_muyfxk.png',
+          features: [
+            'Busca avançada com filtros e geolocalização',
+            'Perfil público do profissional com galeria e avaliações',
+            'Dashboards separados para profissional e cliente',
+            'Sistema completo de avaliações e favoritos',
+            'Blog de artigos de saúde e onboarding multi-etapas'
+          ],
+          architecture: {
+            frontend: [
+              'React 18 + TypeScript + Vite',
+              'Wouter (Routing)',
+              'Tailwind CSS + Radix UI',
+              'React Query + React Hook Form'
+            ],
+            backend: [
+              'Supabase (PostgreSQL, Auth, Storage)',
+              'Modelo relacional com JSONB',
+              'Row Level Security (RLS)'
+            ],
+            integrations: [
+              'ViaCEP',
+              'Google Maps / Leaflet',
+              'Supabase Storage'
+            ]
+          }
         },
         {
           title: 'EquipManager Analytics (Python)',
@@ -162,7 +231,22 @@ export const CONTENT: Record<'pt' | 'en', Translation> = {
             'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1764715476/AmplusExpense_ColaboradorDashboard_ga9pfz.png',
             'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1764715476/AmplusExpense_NewReport_kvaxwb.png',
             'https://res.cloudinary.com/dgkhdoh8j/image/upload/v1764715476/AmplusExpense_AdminDashboard_eeginp.png'
-          ]
+          ],
+          features: [
+            'Registro e categorização de despesas',
+            'Visualizações gráficas com Recharts',
+            'Interface responsiva e moderna',
+            'Gestão de orçamentos e fluxos de aprovação'
+          ],
+          architecture: {
+            frontend: [
+              'React 18.2.0',
+              'Vite 4.4.5',
+              'Tailwind CSS 3.3.3',
+              'Radix UI + Framer Motion',
+              'Recharts 2.9.0'
+            ]
+          }
         }
       ]
     },

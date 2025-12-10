@@ -139,19 +139,61 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, isOpen, onC
                     </p>
                   </div>
 
-                  <div>
-                    <h3 className="text-sm font-semibold text-slate-300 uppercase tracking-wider mb-2">Challenge & Solution</h3>
-                    <div className="space-y-3">
-                      <div className="bg-slate-800/50 p-3 rounded border border-slate-800">
-                        <span className="text-red-400 font-medium text-xs block mb-1">PROBLEM</span>
-                        <p className="text-slate-400 text-sm">{project.problem}</p>
-                      </div>
-                      <div className="bg-slate-800/50 p-3 rounded border border-slate-800">
-                        <span className="text-green-400 font-medium text-xs block mb-1">SOLUTION</span>
-                        <p className="text-slate-400 text-sm">{project.solution}</p>
+
+
+                  {project.features && project.features.length > 0 && (
+                    <div>
+                      <h3 className="text-sm font-semibold text-slate-300 uppercase tracking-wider mb-2">Key Features</h3>
+                      <ul className="space-y-1">
+                        {project.features.map((feature, idx) => (
+                          <li key={idx} className="flex items-start text-sm text-slate-400">
+                            <span className="mr-2 mt-1.5 w-1.5 h-1.5 bg-primary-500 rounded-full flex-shrink-0"></span>
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                  {project.architecture && (
+                    <div>
+                      <h3 className="text-sm font-semibold text-slate-300 uppercase tracking-wider mb-2">Technical Architecture</h3>
+                      <div className="space-y-3 text-sm">
+                        {project.architecture.frontend && (
+                          <div>
+                            <span className="text-slate-300 font-medium block mb-1">Frontend</span>
+                            <p className="text-slate-400 text-xs leading-relaxed">
+                              {project.architecture.frontend.join(', ')}
+                            </p>
+                          </div>
+                        )}
+                        {project.architecture.backend && (
+                          <div>
+                            <span className="text-slate-300 font-medium block mb-1">Backend</span>
+                            <p className="text-slate-400 text-xs leading-relaxed">
+                              {project.architecture.backend.join(', ')}
+                            </p>
+                          </div>
+                        )}
+                        {project.architecture.integrations && (
+                          <div>
+                            <span className="text-slate-300 font-medium block mb-1">Integrations</span>
+                            <p className="text-slate-400 text-xs leading-relaxed">
+                              {project.architecture.integrations.join(', ')}
+                            </p>
+                          </div>
+                        )}
+                        {project.architecture.security && (
+                          <div>
+                            <span className="text-slate-300 font-medium block mb-1">Security</span>
+                            <p className="text-slate-400 text-xs leading-relaxed">
+                              {project.architecture.security.join(', ')}
+                            </p>
+                          </div>
+                        )}
                       </div>
                     </div>
-                  </div>
+                  )}
 
                   <div>
                     <h3 className="text-sm font-semibold text-slate-300 uppercase tracking-wider mb-2">Technologies</h3>
