@@ -18,9 +18,9 @@ export const About: React.FC<AboutProps> = ({ t }) => {
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-8 gap-6 items-center">
           {/* Profile Image Column */}
-          <ScrollReveal direction="right">
+          <ScrollReveal direction="right" className="lg:col-span-2">
             <div className="flex justify-center lg:justify-end">
               <div className="relative w-64 h-64 rounded-full overflow-hidden border-4 border-primary-500 shadow-xl group">
                 <div className="absolute inset-0 bg-primary-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
@@ -34,7 +34,7 @@ export const About: React.FC<AboutProps> = ({ t }) => {
           </ScrollReveal>
 
           {/* Bio Column */}
-          <div className="space-y-6 lg:col-span-2">
+          <div className="space-y-6 lg:col-span-3">
             <ScrollReveal direction="up" delay={0.2}>
               <p className="text-lg text-slate-300 leading-relaxed border-l-4 border-primary-500 pl-4">
                 {t.bio}
@@ -57,7 +57,7 @@ export const About: React.FC<AboutProps> = ({ t }) => {
           </div>
 
           {/* Education Column */}
-          <ScrollReveal direction="left" delay={0.4}>
+          <ScrollReveal direction="left" delay={0.4} className="lg:col-span-3">
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-r from-primary-500 to-teal-500 rounded-xl opacity-20 blur-lg"></div>
               <div className="relative bg-slate-800 rounded-xl p-6 border border-slate-700 h-full flex flex-col justify-center">
