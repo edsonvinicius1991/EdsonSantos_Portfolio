@@ -18,10 +18,10 @@ export const About: React.FC<AboutProps> = ({ t }) => {
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 lg:grid-cols-8 gap-6 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-9 gap-6 items-center">
           {/* Profile Image Column */}
           <ScrollReveal direction="right" className="lg:col-span-2">
-            <div className="flex justify-center lg:justify-end">
+            <div className="flex justify-center lg:justify-end lg:pr-12">
               <div className="relative w-64 h-64 rounded-full overflow-hidden border-4 border-primary-500 shadow-xl group">
                 <div className="absolute inset-0 bg-primary-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
                 <img
@@ -34,7 +34,7 @@ export const About: React.FC<AboutProps> = ({ t }) => {
           </ScrollReveal>
 
           {/* Bio Column */}
-          <div className="space-y-6 lg:col-span-3">
+          <div className="space-y-6 lg:col-span-4">
             <ScrollReveal direction="up" delay={0.2}>
               <p className="text-lg text-slate-300 leading-relaxed border-l-4 border-primary-500 pl-4">
                 {t.bio}
